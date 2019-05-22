@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'LMGaugeViewSwift_Example' do
+  pod 'LMGaugeViewSwift', :path => '../'
+
+  target 'LMGaugeViewSwift_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
