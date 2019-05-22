@@ -1,0 +1,16 @@
+PODS:
+  - LMGaugeViewSwift (1.0.0)
+
+DEPENDENCIES:
+  - LMGaugeViewSwift (from `../`)
+
+EXTERNAL SOURCES:
+  LMGaugeViewSwift:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LMGaugeViewSwift: 2a4f3f235ebb08f1ac6d5e4c583807774ec08e9e
+
+PODFILE CHECKSUM: f6ade4f026afe971d4ad17be525aa8f5af78872e
+
+COCOAPODS: 1.6.1

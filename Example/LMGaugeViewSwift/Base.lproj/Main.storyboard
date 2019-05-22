@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,8 +20,46 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AX0-AV-QLp" customClass="LMGaugeView" customModule="LMGaugeViewSwift">
+                                <rect key="frame" x="20" y="136" width="335" height="335"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yWc-Nc-foC">
+                                <rect key="frame" x="163" y="576" width="51" height="31"/>
+                                <connections>
+                                    <action selector="changedStyleSwitchValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="eaL-0d-cX4"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed by LMinh" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCD-yw-OxZ" userLabel="Label - About">
+                                <rect key="frame" x="20" y="627" width="335" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="gge-Dn-bgo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pCD-yw-OxZ" firstAttribute="top" secondItem="yWc-Nc-foC" secondAttribute="bottom" constant="20" id="2jy-AM-Srz"/>
+                            <constraint firstItem="pCD-yw-OxZ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="7t2-93-XZN"/>
+                            <constraint firstAttribute="bottom" secondItem="pCD-yw-OxZ" secondAttribute="bottom" constant="20" id="BJz-eT-eI3"/>
+                            <constraint firstAttribute="trailing" secondItem="AX0-AV-QLp" secondAttribute="trailing" constant="20" id="DoW-AK-ZQP"/>
+                            <constraint firstItem="AX0-AV-QLp" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="QN2-vd-x2l"/>
+                            <constraint firstItem="AX0-AV-QLp" firstAttribute="width" secondItem="AX0-AV-QLp" secondAttribute="height" multiplier="1:1" id="kfd-Cr-OYk"/>
+                            <constraint firstItem="AX0-AV-QLp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="lJj-zo-DJT"/>
+                            <constraint firstItem="yWc-Nc-foC" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="lYH-ge-jIQ"/>
+                            <constraint firstItem="AX0-AV-QLp" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="-30" id="ql0-9r-4R3"/>
+                            <constraint firstAttribute="trailing" secondItem="pCD-yw-OxZ" secondAttribute="trailing" constant="20" id="rxz-Ia-cdf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="aboutLabel" destination="pCD-yw-OxZ" id="38G-iw-3j9"/>
+                        <outlet property="gaugeView" destination="AX0-AV-QLp" id="Uqf-oC-inB"/>
+                        <outlet property="nightModeSwitch" destination="yWc-Nc-foC" id="PTq-hu-Hm0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

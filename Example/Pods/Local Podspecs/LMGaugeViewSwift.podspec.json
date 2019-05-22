@@ -1,0 +1,26 @@
+{
+  "name": "LMGaugeViewSwift",
+  "version": "1.0.0",
+  "summary": "LMGaugeView is a simple and customizable gauge control for iOS.",
+  "description": "LMGaugeView is a simple and customizable gauge control for iOS.",
+  "homepage": "https://github.com/lminhtm/LMGaugeViewSwift",
+  "screenshots": [
+    "https://github.com/lminhtm/LMGaugeViewSwift/screenshots_1",
+    "https://github.com/lminhtm/LMGaugeViewSwift/screenshots_2"
+  ],
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "LMinh": "lminhtm@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/lminhtm/LMGaugeViewSwift.git",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "LMGaugeViewSwift/Classes/**/*"
+}

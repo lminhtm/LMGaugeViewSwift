@@ -8,33 +8,21 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LMGaugeViewSwift'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of LMGaugeViewSwift.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.version          = '1.0.0'
+  s.summary          = 'LMGaugeView is a simple and customizable gauge control for iOS.'
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+LMGaugeView is a simple and customizable gauge control for iOS.
                        DESC
 
-  s.homepage         = 'https://github.com/LMinh/LMGaugeViewSwift'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/lminhtm/LMGaugeViewSwift'
+  s.screenshots      = 'https://github.com/lminhtm/LMGaugeViewSwift/screenshots_1', 'https://github.com/lminhtm/LMGaugeViewSwift/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'LMinh' => 'lminhtm@gmail.com' }
-  s.source           = { :git => 'https://github.com/LMinh/LMGaugeViewSwift.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
+  s.source           = { :git => 'https://github.com/lminhtm/LMGaugeViewSwift.git', :tag => s.version.to_s }
+  
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'LMGaugeViewSwift/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'LMGaugeViewSwift' => ['LMGaugeViewSwift/Assets/*.png']
-  # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

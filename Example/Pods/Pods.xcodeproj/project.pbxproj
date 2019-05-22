@@ -1,0 +1,769 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16C7CBB6416320A5C27CD53A9EF00CD4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		3B4B34CF8D6C79C310840E9ED6CD78CA /* LMGaugeViewSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E933C9AAC5A8F8DEA7FF4780F9A41A4C /* LMGaugeViewSwift-dummy.m */; };
+		45F05E04B1E8A4C3D021A496261439C9 /* Pods-LMGaugeViewSwift_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 66FC8DF2313EAD0688FF79297D732EBC /* Pods-LMGaugeViewSwift_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		538B2E3A0FE88249DBEA65E231CF50E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		8F47B0DE782FDBC26497B6497CBDB78E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		BDF6171F504F5D322DA3D4E03A51D017 /* LMGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3883000CFE67856F569DFDDDF3109D /* LMGaugeView.swift */; };
+		C83071B96E3015119CD66ACE7C183EA4 /* Pods-LMGaugeViewSwift_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E50483632F375E9F3C81D59DA2F81E53 /* Pods-LMGaugeViewSwift_Tests-dummy.m */; };
+		EB4C9ADD2BCCAD2170ADC8BBAD9F73F1 /* Pods-LMGaugeViewSwift_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC437E8DCA22E277D4E7CB2C64BADF8C /* Pods-LMGaugeViewSwift_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC759630D667AA4672C0D63642223762 /* LMGaugeViewSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F649C926697E2FD691393644B47A26CA /* LMGaugeViewSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD42AA4B30912BEE3067B274FD43FCB2 /* Pods-LMGaugeViewSwift_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D492B36DD0F637159A68ED5C24BF936 /* Pods-LMGaugeViewSwift_Example-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CA00B349D07459884FD571DB5388C299 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E4A1A0A1F91CAC3472E160D5C70CA54;
+			remoteInfo = "Pods-LMGaugeViewSwift_Example";
+		};
+		D95FB3F81DEB6A6AB3E5B6D6572DE4B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 353168765384BCFEE2B7BCA1B613D341;
+			remoteInfo = LMGaugeViewSwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0D95D92DD31D69FBC4DAFDC640FC4E24 /* LMGaugeViewSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LMGaugeViewSwift.framework; path = LMGaugeViewSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BA5EFA5BBBE61F4CD16B6125F3AAF61 /* Pods-LMGaugeViewSwift_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LMGaugeViewSwift_Example.modulemap"; sourceTree = "<group>"; };
+		2CE106155EE49B261D337B2821D6BA16 /* Pods_LMGaugeViewSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LMGaugeViewSwift_Example.framework; path = "Pods-LMGaugeViewSwift_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DDA2998D1686521F9A895BFD14058CD /* Pods-LMGaugeViewSwift_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LMGaugeViewSwift_Tests.modulemap"; sourceTree = "<group>"; };
+		37C84058CEB1DEA47CD42796876E8435 /* LMGaugeViewSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LMGaugeViewSwift.modulemap; sourceTree = "<group>"; };
+		37CF26A4F0075F509E2471CC7AF01CB5 /* Pods-LMGaugeViewSwift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LMGaugeViewSwift_Example.release.xcconfig"; sourceTree = "<group>"; };
+		3EE4F7E9D5171716E0102E87D9A5CF42 /* Pods-LMGaugeViewSwift_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LMGaugeViewSwift_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		45486A23FC4A82E036F49D71A1FFDA5A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		55964A940A4D2E52D4403749D9980347 /* LMGaugeViewSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = LMGaugeViewSwift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		66FC8DF2313EAD0688FF79297D732EBC /* Pods-LMGaugeViewSwift_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LMGaugeViewSwift_Tests-umbrella.h"; sourceTree = "<group>"; };
+		6D324E7C6C450A67DFEE9E5EFBB075D7 /* Pods-LMGaugeViewSwift_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LMGaugeViewSwift_Tests-Info.plist"; sourceTree = "<group>"; };
+		7267D6807BDA8EAFF77519D04602AB25 /* Pods_LMGaugeViewSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LMGaugeViewSwift_Tests.framework; path = "Pods-LMGaugeViewSwift_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BC2E5E17751064ABD8EE74543953302 /* LMGaugeViewSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LMGaugeViewSwift-Info.plist"; sourceTree = "<group>"; };
+		9D492B36DD0F637159A68ED5C24BF936 /* Pods-LMGaugeViewSwift_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LMGaugeViewSwift_Example-dummy.m"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A3948A86C3CF54315756A5D22317448E /* Pods-LMGaugeViewSwift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LMGaugeViewSwift_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		A97FACF8102B41ECC3DBF91A70DF636A /* Pods-LMGaugeViewSwift_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LMGaugeViewSwift_Example-frameworks.sh"; sourceTree = "<group>"; };
+		AA1BF65FF00EA10EEEBDB79F5AEC7E9F /* Pods-LMGaugeViewSwift_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LMGaugeViewSwift_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AC437E8DCA22E277D4E7CB2C64BADF8C /* Pods-LMGaugeViewSwift_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LMGaugeViewSwift_Example-umbrella.h"; sourceTree = "<group>"; };
+		B4ED342F6375BBD03742145644538CDB /* LMGaugeViewSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LMGaugeViewSwift.xcconfig; sourceTree = "<group>"; };
+		B9A1E423F10AB3C01E221D7B5D0903CE /* Pods-LMGaugeViewSwift_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LMGaugeViewSwift_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BC3883000CFE67856F569DFDDDF3109D /* LMGaugeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LMGaugeView.swift; path = LMGaugeViewSwift/Classes/LMGaugeView.swift; sourceTree = "<group>"; };
+		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CF29133CABDDBE5BC6C673BB467855B0 /* Pods-LMGaugeViewSwift_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LMGaugeViewSwift_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		D09930EADF1D86D33214B7A7A4AEC44E /* Pods-LMGaugeViewSwift_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LMGaugeViewSwift_Example-Info.plist"; sourceTree = "<group>"; };
+		D892824D0EC63E2E043F52AF4C8E002A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		DE8ABF59B551267B394F009E29F87B5D /* Pods-LMGaugeViewSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LMGaugeViewSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		E50483632F375E9F3C81D59DA2F81E53 /* Pods-LMGaugeViewSwift_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LMGaugeViewSwift_Tests-dummy.m"; sourceTree = "<group>"; };
+		E933C9AAC5A8F8DEA7FF4780F9A41A4C /* LMGaugeViewSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LMGaugeViewSwift-dummy.m"; sourceTree = "<group>"; };
+		F35ADBF79C1651F2333C3FF7E5CE9736 /* Pods-LMGaugeViewSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LMGaugeViewSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		F649C926697E2FD691393644B47A26CA /* LMGaugeViewSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LMGaugeViewSwift-umbrella.h"; sourceTree = "<group>"; };
+		FE6E52816A182BB2DE7599D974847BDF /* LMGaugeViewSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LMGaugeViewSwift-prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5CEDB19D214875D36E625A1A2A556275 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				538B2E3A0FE88249DBEA65E231CF50E2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70AC58376BF0356254029153B4E738EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F47B0DE782FDBC26497B6497CBDB78E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70CFCC9B37B80BF0F217AE0EF1393797 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16C7CBB6416320A5C27CD53A9EF00CD4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01511AF2879A132C04CA2AB64E473D9E /* Pods-LMGaugeViewSwift_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2DDA2998D1686521F9A895BFD14058CD /* Pods-LMGaugeViewSwift_Tests.modulemap */,
+				B9A1E423F10AB3C01E221D7B5D0903CE /* Pods-LMGaugeViewSwift_Tests-acknowledgements.markdown */,
+				CF29133CABDDBE5BC6C673BB467855B0 /* Pods-LMGaugeViewSwift_Tests-acknowledgements.plist */,
+				E50483632F375E9F3C81D59DA2F81E53 /* Pods-LMGaugeViewSwift_Tests-dummy.m */,
+				6D324E7C6C450A67DFEE9E5EFBB075D7 /* Pods-LMGaugeViewSwift_Tests-Info.plist */,
+				66FC8DF2313EAD0688FF79297D732EBC /* Pods-LMGaugeViewSwift_Tests-umbrella.h */,
+				DE8ABF59B551267B394F009E29F87B5D /* Pods-LMGaugeViewSwift_Tests.debug.xcconfig */,
+				F35ADBF79C1651F2333C3FF7E5CE9736 /* Pods-LMGaugeViewSwift_Tests.release.xcconfig */,
+			);
+			name = "Pods-LMGaugeViewSwift_Tests";
+			path = "Target Support Files/Pods-LMGaugeViewSwift_Tests";
+			sourceTree = "<group>";
+		};
+		088057A87580023B8372EA0BA1B44055 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9B0878C85F6A9B152AB77E96A01CF08C /* Pods-LMGaugeViewSwift_Example */,
+				01511AF2879A132C04CA2AB64E473D9E /* Pods-LMGaugeViewSwift_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		18063BAD110F82A86FBBA6063C59A110 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C293DB8EEB14590485A8ADBCC06CE469 /* LMGaugeViewSwift */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		2FF83DDDF1E870446658A4B3393E9C13 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				37C84058CEB1DEA47CD42796876E8435 /* LMGaugeViewSwift.modulemap */,
+				B4ED342F6375BBD03742145644538CDB /* LMGaugeViewSwift.xcconfig */,
+				E933C9AAC5A8F8DEA7FF4780F9A41A4C /* LMGaugeViewSwift-dummy.m */,
+				8BC2E5E17751064ABD8EE74543953302 /* LMGaugeViewSwift-Info.plist */,
+				FE6E52816A182BB2DE7599D974847BDF /* LMGaugeViewSwift-prefix.pch */,
+				F649C926697E2FD691393644B47A26CA /* LMGaugeViewSwift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/LMGaugeViewSwift";
+			sourceTree = "<group>";
+		};
+		7933C4FA871F9C4F3598E50BA25A5322 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				45486A23FC4A82E036F49D71A1FFDA5A /* LICENSE */,
+				55964A940A4D2E52D4403749D9980347 /* LMGaugeViewSwift.podspec */,
+				D892824D0EC63E2E043F52AF4C8E002A /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		9B055D0CFEA43187E72B03DED11F5662 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		9B0878C85F6A9B152AB77E96A01CF08C /* Pods-LMGaugeViewSwift_Example */ = {
+			isa = PBXGroup;
+			children = (
+				1BA5EFA5BBBE61F4CD16B6125F3AAF61 /* Pods-LMGaugeViewSwift_Example.modulemap */,
+				AA1BF65FF00EA10EEEBDB79F5AEC7E9F /* Pods-LMGaugeViewSwift_Example-acknowledgements.markdown */,
+				3EE4F7E9D5171716E0102E87D9A5CF42 /* Pods-LMGaugeViewSwift_Example-acknowledgements.plist */,
+				9D492B36DD0F637159A68ED5C24BF936 /* Pods-LMGaugeViewSwift_Example-dummy.m */,
+				A97FACF8102B41ECC3DBF91A70DF636A /* Pods-LMGaugeViewSwift_Example-frameworks.sh */,
+				D09930EADF1D86D33214B7A7A4AEC44E /* Pods-LMGaugeViewSwift_Example-Info.plist */,
+				AC437E8DCA22E277D4E7CB2C64BADF8C /* Pods-LMGaugeViewSwift_Example-umbrella.h */,
+				A3948A86C3CF54315756A5D22317448E /* Pods-LMGaugeViewSwift_Example.debug.xcconfig */,
+				37CF26A4F0075F509E2471CC7AF01CB5 /* Pods-LMGaugeViewSwift_Example.release.xcconfig */,
+			);
+			name = "Pods-LMGaugeViewSwift_Example";
+			path = "Target Support Files/Pods-LMGaugeViewSwift_Example";
+			sourceTree = "<group>";
+		};
+		C293DB8EEB14590485A8ADBCC06CE469 /* LMGaugeViewSwift */ = {
+			isa = PBXGroup;
+			children = (
+				BC3883000CFE67856F569DFDDDF3109D /* LMGaugeView.swift */,
+				7933C4FA871F9C4F3598E50BA25A5322 /* Pod */,
+				2FF83DDDF1E870446658A4B3393E9C13 /* Support Files */,
+			);
+			name = LMGaugeViewSwift;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		CEEE2DD9E681B917E0FE55B3EF2F4194 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0D95D92DD31D69FBC4DAFDC640FC4E24 /* LMGaugeViewSwift.framework */,
+				2CE106155EE49B261D337B2821D6BA16 /* Pods_LMGaugeViewSwift_Example.framework */,
+				7267D6807BDA8EAFF77519D04602AB25 /* Pods_LMGaugeViewSwift_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				18063BAD110F82A86FBBA6063C59A110 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				CEEE2DD9E681B917E0FE55B3EF2F4194 /* Products */,
+				088057A87580023B8372EA0BA1B44055 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B055D0CFEA43187E72B03DED11F5662 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1704583DF91DB9F2597F024EB1946AD5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC759630D667AA4672C0D63642223762 /* LMGaugeViewSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		259CBAED7EA037781E0AD6B5FD8842F9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45F05E04B1E8A4C3D021A496261439C9 /* Pods-LMGaugeViewSwift_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83C0C74A35258DA5D21A4691F3EF6C50 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB4C9ADD2BCCAD2170ADC8BBAD9F73F1 /* Pods-LMGaugeViewSwift_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		353168765384BCFEE2B7BCA1B613D341 /* LMGaugeViewSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DE3B0F2436CED6E9CD6B5C3F4FF5524 /* Build configuration list for PBXNativeTarget "LMGaugeViewSwift" */;
+			buildPhases = (
+				1704583DF91DB9F2597F024EB1946AD5 /* Headers */,
+				F28EB8B2408FC5334FC62AEE190BD728 /* Sources */,
+				70AC58376BF0356254029153B4E738EC /* Frameworks */,
+				39D31703F7FC785A0B77B4FD6E6971E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LMGaugeViewSwift;
+			productName = LMGaugeViewSwift;
+			productReference = 0D95D92DD31D69FBC4DAFDC640FC4E24 /* LMGaugeViewSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5E4A1A0A1F91CAC3472E160D5C70CA54 /* Pods-LMGaugeViewSwift_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C90E29E08066DA67D5EEBB078D1B26FA /* Build configuration list for PBXNativeTarget "Pods-LMGaugeViewSwift_Example" */;
+			buildPhases = (
+				83C0C74A35258DA5D21A4691F3EF6C50 /* Headers */,
+				9871CCC5AF98314912D241BE406C4D10 /* Sources */,
+				5CEDB19D214875D36E625A1A2A556275 /* Frameworks */,
+				7CDC6D2DE2269C50C03AEE5B66A26A46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				81095882B4597A44077DC4F3E6F87A50 /* PBXTargetDependency */,
+			);
+			name = "Pods-LMGaugeViewSwift_Example";
+			productName = "Pods-LMGaugeViewSwift_Example";
+			productReference = 2CE106155EE49B261D337B2821D6BA16 /* Pods_LMGaugeViewSwift_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EC582B710E21CA2DCB85D3A078594F2A /* Pods-LMGaugeViewSwift_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72FDDDE5CE8D1D29F8C8FCBAB43D6076 /* Build configuration list for PBXNativeTarget "Pods-LMGaugeViewSwift_Tests" */;
+			buildPhases = (
+				259CBAED7EA037781E0AD6B5FD8842F9 /* Headers */,
+				DA6D4F7A8FB99118357EA197ADB9851F /* Sources */,
+				70CFCC9B37B80BF0F217AE0EF1393797 /* Frameworks */,
+				4FF63C56F822C474B5C43FECCF57C9D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17434473FD1F14D5B82005FF52D626E7 /* PBXTargetDependency */,
+			);
+			name = "Pods-LMGaugeViewSwift_Tests";
+			productName = "Pods-LMGaugeViewSwift_Tests";
+			productReference = 7267D6807BDA8EAFF77519D04602AB25 /* Pods_LMGaugeViewSwift_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = CEEE2DD9E681B917E0FE55B3EF2F4194 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				353168765384BCFEE2B7BCA1B613D341 /* LMGaugeViewSwift */,
+				5E4A1A0A1F91CAC3472E160D5C70CA54 /* Pods-LMGaugeViewSwift_Example */,
+				EC582B710E21CA2DCB85D3A078594F2A /* Pods-LMGaugeViewSwift_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		39D31703F7FC785A0B77B4FD6E6971E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FF63C56F822C474B5C43FECCF57C9D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CDC6D2DE2269C50C03AEE5B66A26A46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9871CCC5AF98314912D241BE406C4D10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD42AA4B30912BEE3067B274FD43FCB2 /* Pods-LMGaugeViewSwift_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA6D4F7A8FB99118357EA197ADB9851F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C83071B96E3015119CD66ACE7C183EA4 /* Pods-LMGaugeViewSwift_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F28EB8B2408FC5334FC62AEE190BD728 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDF6171F504F5D322DA3D4E03A51D017 /* LMGaugeView.swift in Sources */,
+				3B4B34CF8D6C79C310840E9ED6CD78CA /* LMGaugeViewSwift-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		17434473FD1F14D5B82005FF52D626E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-LMGaugeViewSwift_Example";
+			target = 5E4A1A0A1F91CAC3472E160D5C70CA54 /* Pods-LMGaugeViewSwift_Example */;
+			targetProxy = CA00B349D07459884FD571DB5388C299 /* PBXContainerItemProxy */;
+		};
+		81095882B4597A44077DC4F3E6F87A50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LMGaugeViewSwift;
+			target = 353168765384BCFEE2B7BCA1B613D341 /* LMGaugeViewSwift */;
+			targetProxy = D95FB3F81DEB6A6AB3E5B6D6572DE4B4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		059856F85717F7418E348AE542E4AF06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE8ABF59B551267B394F009E29F87B5D /* Pods-LMGaugeViewSwift_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LMGaugeViewSwift_Tests/Pods-LMGaugeViewSwift_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LMGaugeViewSwift_Tests/Pods-LMGaugeViewSwift_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		05DF210AC65EBB0E593AAF976B2C2177 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		0D78407170C7117AE04AEC6B0102936E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4ED342F6375BBD03742145644538CDB /* LMGaugeViewSwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LMGaugeViewSwift/LMGaugeViewSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LMGaugeViewSwift/LMGaugeViewSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LMGaugeViewSwift/LMGaugeViewSwift.modulemap";
+				PRODUCT_MODULE_NAME = LMGaugeViewSwift;
+				PRODUCT_NAME = LMGaugeViewSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		421ECB1396280A8D83853C3DDBED1700 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		74C1F52E319279C624FE7EDC1E8B49E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37CF26A4F0075F509E2471CC7AF01CB5 /* Pods-LMGaugeViewSwift_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LMGaugeViewSwift_Example/Pods-LMGaugeViewSwift_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LMGaugeViewSwift_Example/Pods-LMGaugeViewSwift_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8A2C2DF8E699D8B7111111B82CDB2164 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F35ADBF79C1651F2333C3FF7E5CE9736 /* Pods-LMGaugeViewSwift_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LMGaugeViewSwift_Tests/Pods-LMGaugeViewSwift_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LMGaugeViewSwift_Tests/Pods-LMGaugeViewSwift_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BAC16BDF2510EB7930C9E68207813D99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4ED342F6375BBD03742145644538CDB /* LMGaugeViewSwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LMGaugeViewSwift/LMGaugeViewSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LMGaugeViewSwift/LMGaugeViewSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LMGaugeViewSwift/LMGaugeViewSwift.modulemap";
+				PRODUCT_MODULE_NAME = LMGaugeViewSwift;
+				PRODUCT_NAME = LMGaugeViewSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D1DAABFD8B7186D61489F233DC1785A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3948A86C3CF54315756A5D22317448E /* Pods-LMGaugeViewSwift_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LMGaugeViewSwift_Example/Pods-LMGaugeViewSwift_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LMGaugeViewSwift_Example/Pods-LMGaugeViewSwift_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2DE3B0F2436CED6E9CD6B5C3F4FF5524 /* Build configuration list for PBXNativeTarget "LMGaugeViewSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAC16BDF2510EB7930C9E68207813D99 /* Debug */,
+				0D78407170C7117AE04AEC6B0102936E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				421ECB1396280A8D83853C3DDBED1700 /* Debug */,
+				05DF210AC65EBB0E593AAF976B2C2177 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72FDDDE5CE8D1D29F8C8FCBAB43D6076 /* Build configuration list for PBXNativeTarget "Pods-LMGaugeViewSwift_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				059856F85717F7418E348AE542E4AF06 /* Debug */,
+				8A2C2DF8E699D8B7111111B82CDB2164 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C90E29E08066DA67D5EEBB078D1B26FA /* Build configuration list for PBXNativeTarget "Pods-LMGaugeViewSwift_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1DAABFD8B7186D61489F233DC1785A5 /* Debug */,
+				74C1F52E319279C624FE7EDC1E8B49E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
