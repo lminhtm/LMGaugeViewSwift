@@ -21,7 +21,7 @@ LMGaugeViewSwift is a simple and customizable gauge control for iOS.
   s.source           = { :git => 'https://github.com/lminhtm/LMGaugeViewSwift.git', :tag => s.version.to_s }
   
   s.ios.deployment_target = '8.0'
-
+  s.swift_version = '5.0'
   s.source_files = 'LMGaugeViewSwift/Classes/**/*'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
