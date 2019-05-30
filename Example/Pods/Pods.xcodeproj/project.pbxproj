@@ -12,7 +12,7 @@
 		45F05E04B1E8A4C3D021A496261439C9 /* Pods-LMGaugeViewSwift_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 66FC8DF2313EAD0688FF79297D732EBC /* Pods-LMGaugeViewSwift_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		538B2E3A0FE88249DBEA65E231CF50E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		8F47B0DE782FDBC26497B6497CBDB78E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		BDF6171F504F5D322DA3D4E03A51D017 /* LMGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3883000CFE67856F569DFDDDF3109D /* LMGaugeView.swift */; };
+		BDF6171F504F5D322DA3D4E03A51D017 /* GaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3883000CFE67856F569DFDDDF3109D /* GaugeView.swift */; };
 		C83071B96E3015119CD66ACE7C183EA4 /* Pods-LMGaugeViewSwift_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E50483632F375E9F3C81D59DA2F81E53 /* Pods-LMGaugeViewSwift_Tests-dummy.m */; };
 		EB4C9ADD2BCCAD2170ADC8BBAD9F73F1 /* Pods-LMGaugeViewSwift_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC437E8DCA22E277D4E7CB2C64BADF8C /* Pods-LMGaugeViewSwift_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC759630D667AA4672C0D63642223762 /* LMGaugeViewSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F649C926697E2FD691393644B47A26CA /* LMGaugeViewSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -37,32 +37,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D95D92DD31D69FBC4DAFDC640FC4E24 /* LMGaugeViewSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LMGaugeViewSwift.framework; path = LMGaugeViewSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D95D92DD31D69FBC4DAFDC640FC4E24 /* LMGaugeViewSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LMGaugeViewSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BA5EFA5BBBE61F4CD16B6125F3AAF61 /* Pods-LMGaugeViewSwift_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LMGaugeViewSwift_Example.modulemap"; sourceTree = "<group>"; };
-		2CE106155EE49B261D337B2821D6BA16 /* Pods_LMGaugeViewSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LMGaugeViewSwift_Example.framework; path = "Pods-LMGaugeViewSwift_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CE106155EE49B261D337B2821D6BA16 /* Pods_LMGaugeViewSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LMGaugeViewSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DDA2998D1686521F9A895BFD14058CD /* Pods-LMGaugeViewSwift_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LMGaugeViewSwift_Tests.modulemap"; sourceTree = "<group>"; };
 		37C84058CEB1DEA47CD42796876E8435 /* LMGaugeViewSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LMGaugeViewSwift.modulemap; sourceTree = "<group>"; };
 		37CF26A4F0075F509E2471CC7AF01CB5 /* Pods-LMGaugeViewSwift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LMGaugeViewSwift_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3EE4F7E9D5171716E0102E87D9A5CF42 /* Pods-LMGaugeViewSwift_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LMGaugeViewSwift_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		45486A23FC4A82E036F49D71A1FFDA5A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		55964A940A4D2E52D4403749D9980347 /* LMGaugeViewSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = LMGaugeViewSwift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		45486A23FC4A82E036F49D71A1FFDA5A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		55964A940A4D2E52D4403749D9980347 /* LMGaugeViewSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = LMGaugeViewSwift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		66FC8DF2313EAD0688FF79297D732EBC /* Pods-LMGaugeViewSwift_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LMGaugeViewSwift_Tests-umbrella.h"; sourceTree = "<group>"; };
 		6D324E7C6C450A67DFEE9E5EFBB075D7 /* Pods-LMGaugeViewSwift_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LMGaugeViewSwift_Tests-Info.plist"; sourceTree = "<group>"; };
-		7267D6807BDA8EAFF77519D04602AB25 /* Pods_LMGaugeViewSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LMGaugeViewSwift_Tests.framework; path = "Pods-LMGaugeViewSwift_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7267D6807BDA8EAFF77519D04602AB25 /* Pods_LMGaugeViewSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LMGaugeViewSwift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BC2E5E17751064ABD8EE74543953302 /* LMGaugeViewSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LMGaugeViewSwift-Info.plist"; sourceTree = "<group>"; };
 		9D492B36DD0F637159A68ED5C24BF936 /* Pods-LMGaugeViewSwift_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LMGaugeViewSwift_Example-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A3948A86C3CF54315756A5D22317448E /* Pods-LMGaugeViewSwift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LMGaugeViewSwift_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A97FACF8102B41ECC3DBF91A70DF636A /* Pods-LMGaugeViewSwift_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LMGaugeViewSwift_Example-frameworks.sh"; sourceTree = "<group>"; };
 		AA1BF65FF00EA10EEEBDB79F5AEC7E9F /* Pods-LMGaugeViewSwift_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LMGaugeViewSwift_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		AC437E8DCA22E277D4E7CB2C64BADF8C /* Pods-LMGaugeViewSwift_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LMGaugeViewSwift_Example-umbrella.h"; sourceTree = "<group>"; };
 		B4ED342F6375BBD03742145644538CDB /* LMGaugeViewSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LMGaugeViewSwift.xcconfig; sourceTree = "<group>"; };
 		B9A1E423F10AB3C01E221D7B5D0903CE /* Pods-LMGaugeViewSwift_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LMGaugeViewSwift_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BC3883000CFE67856F569DFDDDF3109D /* LMGaugeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LMGaugeView.swift; path = LMGaugeViewSwift/Classes/LMGaugeView.swift; sourceTree = "<group>"; };
+		BC3883000CFE67856F569DFDDDF3109D /* GaugeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GaugeView.swift; path = LMGaugeViewSwift/Classes/GaugeView.swift; sourceTree = "<group>"; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CF29133CABDDBE5BC6C673BB467855B0 /* Pods-LMGaugeViewSwift_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LMGaugeViewSwift_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		D09930EADF1D86D33214B7A7A4AEC44E /* Pods-LMGaugeViewSwift_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LMGaugeViewSwift_Example-Info.plist"; sourceTree = "<group>"; };
-		D892824D0EC63E2E043F52AF4C8E002A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		D892824D0EC63E2E043F52AF4C8E002A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DE8ABF59B551267B394F009E29F87B5D /* Pods-LMGaugeViewSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LMGaugeViewSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E50483632F375E9F3C81D59DA2F81E53 /* Pods-LMGaugeViewSwift_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LMGaugeViewSwift_Tests-dummy.m"; sourceTree = "<group>"; };
 		E933C9AAC5A8F8DEA7FF4780F9A41A4C /* LMGaugeViewSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LMGaugeViewSwift-dummy.m"; sourceTree = "<group>"; };
@@ -184,7 +184,7 @@
 		C293DB8EEB14590485A8ADBCC06CE469 /* LMGaugeViewSwift */ = {
 			isa = PBXGroup;
 			children = (
-				BC3883000CFE67856F569DFDDDF3109D /* LMGaugeView.swift */,
+				BC3883000CFE67856F569DFDDDF3109D /* GaugeView.swift */,
 				7933C4FA871F9C4F3598E50BA25A5322 /* Pod */,
 				2FF83DDDF1E870446658A4B3393E9C13 /* Support Files */,
 			);
@@ -321,6 +321,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
@@ -380,7 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDF6171F504F5D322DA3D4E03A51D017 /* LMGaugeView.swift in Sources */,
+				BDF6171F504F5D322DA3D4E03A51D017 /* GaugeView.swift in Sources */,
 				3B4B34CF8D6C79C310840E9ED6CD78CA /* LMGaugeViewSwift-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,8 +490,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};

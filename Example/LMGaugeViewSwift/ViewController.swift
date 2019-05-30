@@ -9,13 +9,13 @@
 import UIKit
 import LMGaugeViewSwift
 
-class ViewController: UIViewController, LMGaugeViewDelegate {
+class ViewController: UIViewController, GaugeViewDelegate {
 
     var timeDelta: Double = 1.0/24
     var velocity: Double = 0
     var acceleration: Double = 5
     
-    @IBOutlet weak var gaugeView: LMGaugeView!
+    @IBOutlet weak var gaugeView: GaugeView!
     @IBOutlet weak var nightModeSwitch: UISwitch!
     @IBOutlet weak var aboutLabel: UILabel!
     
@@ -30,9 +30,9 @@ class ViewController: UIViewController, LMGaugeViewDelegate {
         gaugeView.divisionsRadius = 1.25 * ratio
         gaugeView.subDivisionsRadius = (1.25 - 0.5) * ratio
         gaugeView.ringThickness = 16 * ratio
-        gaugeView.valueFont = UIFont(name: LMGaugeView.defaultFontName, size: CGFloat(140 * ratio))!
-        gaugeView.unitOfMeasurementFont = UIFont(name: LMGaugeView.defaultFontName, size: CGFloat(16 * ratio))!
-        gaugeView.minMaxValueFont = UIFont(name: LMGaugeView.defaultMinMaxValueFont, size: CGFloat(12 * ratio))!
+        gaugeView.valueFont = UIFont(name: GaugeView.defaultFontName, size: CGFloat(140 * ratio))!
+        gaugeView.unitOfMeasurementFont = UIFont(name: GaugeView.defaultFontName, size: CGFloat(16 * ratio))!
+        gaugeView.minMaxValueFont = UIFont(name: GaugeView.defaultMinMaxValueFont, size: CGFloat(12 * ratio))!
         
         // Update gauge view
         gaugeView.minValue = 0
@@ -47,9 +47,9 @@ class ViewController: UIViewController, LMGaugeViewDelegate {
                              repeats: true)
     }
 
-    // MARK: LMGAUGEVIEW DELEGATE
+    // MARK: GAUGE VIEW DELEGATE
     
-    func ringStokeColor(gaugeView: LMGaugeView, value: Double) -> UIColor {
+    func ringStokeColor(gaugeView: GaugeView, value: Double) -> UIColor {
         if value >= gaugeView.limitValue {
             return UIColor(red: 1, green: 59.0/255, blue: 48.0/255, alpha: 1)
         }

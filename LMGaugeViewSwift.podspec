@@ -9,13 +9,13 @@
 Pod::Spec.new do |s|
   s.name             = 'LMGaugeViewSwift'
   s.version          = '1.0.0'
-  s.summary          = 'LMGaugeView is a simple and customizable gauge control for iOS.'
+  s.summary          = 'LMGaugeViewSwift is a simple and customizable gauge control for iOS.'
   s.description      = <<-DESC
-LMGaugeView is a simple and customizable gauge control for iOS.
+LMGaugeViewSwift is a simple and customizable gauge control for iOS.
                        DESC
 
   s.homepage         = 'https://github.com/lminhtm/LMGaugeViewSwift'
-  s.screenshots      = 'https://github.com/lminhtm/LMGaugeViewSwift/screenshots_1', 'https://github.com/lminhtm/LMGaugeViewSwift/screenshots_2'
+  s.screenshots      = 'https://raw.github.com/lminhtm/LMGaugeView/master/Screenshots/screenshot1.png', 'https://raw.github.com/lminhtm/LMGaugeView/master/Screenshots/screenshot3.gif'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'LMinh' => 'lminhtm@gmail.com' }
   s.source           = { :git => 'https://github.com/lminhtm/LMGaugeViewSwift.git', :tag => s.version.to_s }

@@ -1,5 +1,5 @@
 //
-//  LMGaugeView.swift
+//  GaugeView.swift
 //  LMGaugeViewSwift
 //
 //  Created by LMinh on 5/22/19.
@@ -8,13 +8,13 @@
 import Foundation
 import UIKit
 
-public protocol LMGaugeViewDelegate: class {
+public protocol GaugeViewDelegate: class {
     
     /// Return ring stroke color from the specified value.
-    func ringStokeColor(gaugeView: LMGaugeView, value: Double) -> UIColor
+    func ringStokeColor(gaugeView: GaugeView, value: Double) -> UIColor
 }
 
-open class LMGaugeView: UIView {
+open class GaugeView: UIView {
     
     // MARK: PROPERTIES
     
@@ -108,7 +108,7 @@ open class LMGaugeView: UIView {
     @IBInspectable public var unitOfMeasurementTextColor: UIColor = UIColor(white: 0.3, alpha: 1)
     
     /// The receiver of all gauge view delegate callbacks.
-    public weak var delegate: LMGaugeViewDelegate? = nil
+    public weak var delegate: GaugeViewDelegate? = nil
     
     var startAngle: Double = .pi * 3/4
     var endAngle: Double = .pi/4 + .pi * 2
@@ -316,7 +316,7 @@ open class LMGaugeView: UIView {
 
 // MARK: - SUPPORT
 
-extension LMGaugeView {
+extension GaugeView {
     func angleFromValue(_ value: Double) -> Double {
         let level = divisionUnitValue != 0 ? (value - minValue)/divisionUnitValue : 0
         let angle = level * divisionUnitAngle + startAngle
