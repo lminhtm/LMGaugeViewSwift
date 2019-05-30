@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/LMGaugeViewSwift.svg?style=flat)](https://cocoapods.org/pods/LMGaugeViewSwift)
 [![Platform](https://img.shields.io/cocoapods/p/LMGaugeViewSwift.svg?style=flat)](https://cocoapods.org/pods/LMGaugeViewSwift)
 
-<img src="https://raw.github.com/lminhtm/LMGaugeView/master/Screenshots/screenshot1.png"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://raw.github.com/lminhtm/LMGaugeView/master/Screenshots/screenshot3.gif"/>
+<img src="https://raw.github.com/lminhtm/LMGaugeView/master/Screenshots/screenshot1.png"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://raw.github.com/lminhtm/LMGaugeView/master/Screenshots/screenshot3.gif"/>
 
 ## Objective-C Version
 https://github.com/lminhtm/LMGaugeView
