@@ -22,13 +22,26 @@ open class GaugeView: UIView {
     
     public static let defaultMinMaxValueFont = "HelveticaNeue"
     
+    public enum DecimalPlaces: String {
+        case zero = "%.0f"
+        case one = "%.1f"
+        case two = "%.2f"
+        // Making more than 2 decimal places is impractical
+    }
+    
+    /// Value decimal places
+    public var valueDecimalPlaces: DecimalPlaces = .zero
+    
+    /// Min/Max decimal places
+    public var minMaxDecimalPlaces: DecimalPlaces = .zero
+    
     /// Current value.
     public var value: Double = 0 {
         didSet {
             value = max(min(value, maxValue), minValue)
             
             // Set text for value label
-            valueLabel.text = String(format: "%.0f", value)
+            valueLabel.text = String(format: valueDecimalPlaces.rawValue, value)
             
             // Trigger the stoke animation of ring layer
             strokeGauge()
@@ -250,7 +263,7 @@ open class GaugeView: UIView {
         if valueLabel.superview == nil {
             addSubview(valueLabel)
         }
-        valueLabel.text = String(format: "%.0f", value)
+        valueLabel.text = String(format: valueDecimalPlaces.rawValue, value)
         valueLabel.font = valueFont
         valueLabel.minimumScaleFactor = 10/valueFont.pointSize
         valueLabel.textColor = valueTextColor
@@ -262,7 +275,7 @@ open class GaugeView: UIView {
         if minValueLabel.superview == nil {
             addSubview(minValueLabel)
         }
-        minValueLabel.text = String(format: "%.0f", minValue)
+        minValueLabel.text = String(format: minMaxDecimalPlaces.rawValue, minValue)
         minValueLabel.font = minMaxValueFont
         minValueLabel.minimumScaleFactor = 10/minMaxValueFont.pointSize
         minValueLabel.textColor = minMaxValueTextColor
@@ -275,7 +288,7 @@ open class GaugeView: UIView {
         if maxValueLabel.superview == nil {
             addSubview(maxValueLabel)
         }
-        maxValueLabel.text = String(format: "%.0f", maxValue)
+        maxValueLabel.text = String(format: minMaxDecimalPlaces.rawValue, maxValue)
         maxValueLabel.font = minMaxValueFont
         maxValueLabel.minimumScaleFactor = 10/minMaxValueFont.pointSize
         maxValueLabel.textColor = minMaxValueTextColor
@@ -304,7 +317,7 @@ open class GaugeView: UIView {
         // Set progress for ring layer
         let progress = maxValue != 0 ? (value - minValue)/(maxValue - minValue) : 0
         progressLayer.strokeEnd = CGFloat(progress)
-
+        
         // Set ring stroke color
         var ringColor = UIColor(red: 76.0/255, green: 217.0/255, blue: 100.0/255, alpha: 1)
         if let delegate = delegate {
