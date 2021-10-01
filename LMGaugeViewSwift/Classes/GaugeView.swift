@@ -311,7 +311,7 @@ open class GaugeView: UIView {
         if let value = value {
             progress = maxValue != 0 ? (value - minValue)/(maxValue - minValue) : 0
         } else {
-            progress = minValue
+            progress = 0
         }
         progressLayer.strokeEnd = CGFloat(progress)
 
