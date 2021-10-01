@@ -8,10 +8,10 @@
 import Foundation
 import UIKit
 
-public protocol GaugeViewDelegate: class {
+public protocol GaugeViewDelegate: AnyObject {
     
     /// Return ring stroke color from the specified value.
-    func ringStokeColor(gaugeView: GaugeView, value: Double) -> UIColor
+    func ringStokeColor(gaugeView: GaugeView, value: Double?) -> UIColor
 }
 
 open class GaugeView: UIView {
@@ -22,13 +22,17 @@ open class GaugeView: UIView {
     
     public static let defaultMinMaxValueFont = "HelveticaNeue"
     
+    public static let unitOfMeasurementLabelHeight = 20
+    
     /// Current value.
-    public var value: Double = 0 {
+    public var value: Double? = nil {
         didSet {
-            value = max(min(value, maxValue), minValue)
+            if let v = value {
+                value = max(min(v, maxValue), minValue)
+            }
             
             // Set text for value label
-            valueLabel.text = String(format: "%.0f", value)
+            showValueLabelText()
             
             // Trigger the stoke animation of ring layer
             strokeGauge()
@@ -125,7 +129,7 @@ open class GaugeView: UIView {
         return layer
     }()
     
-    lazy var valueLabel: UILabel = {
+    lazy public var valueLabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = UIColor.clear
         label.textAlignment = .center
@@ -250,12 +254,13 @@ open class GaugeView: UIView {
         if valueLabel.superview == nil {
             addSubview(valueLabel)
         }
-        valueLabel.text = String(format: "%.0f", value)
+        showValueLabelText()
         valueLabel.font = valueFont
         valueLabel.minimumScaleFactor = 10/valueFont.pointSize
         valueLabel.textColor = valueTextColor
         let insetX = ringThickness + divisionsPadding * 2 + divisionsRadius
-        valueLabel.frame = progressLayer.frame.insetBy(dx: CGFloat(insetX), dy: CGFloat(insetX))
+        let insetY = showUnitOfMeasurement ? insetX + Double(GaugeView.unitOfMeasurementLabelHeight) : insetX
+        valueLabel.frame = progressLayer.frame.insetBy(dx: CGFloat(insetX), dy: CGFloat(insetY))
         valueLabel.frame = valueLabel.frame.offsetBy(dx: 0, dy: showUnitOfMeasurement ? CGFloat(-divisionsPadding/2) : 0)
         
         // Min Value Label
@@ -296,13 +301,18 @@ open class GaugeView: UIView {
         unitOfMeasurementLabel.frame = CGRect(x: valueLabel.frame.origin.x,
                                               y: valueLabel.frame.maxY - 10,
                                               width: valueLabel.frame.width,
-                                              height: 20)
+                                              height: CGFloat(GaugeView.unitOfMeasurementLabelHeight))
     }
     
     public func strokeGauge() {
         
         // Set progress for ring layer
-        let progress = maxValue != 0 ? (value - minValue)/(maxValue - minValue) : 0
+        let progress: Double
+        if let value = value {
+            progress = maxValue != 0 ? (value - minValue)/(maxValue - minValue) : 0
+        } else {
+            progress = minValue
+        }
         progressLayer.strokeEnd = CGFloat(progress)
 
         // Set ring stroke color
@@ -311,6 +321,15 @@ open class GaugeView: UIView {
             ringColor = delegate.ringStokeColor(gaugeView: self, value: value)
         }
         progressLayer.strokeColor = ringColor.cgColor
+    }
+    
+    
+    private func showValueLabelText() {
+        if let value = value {
+            valueLabel.text = String(format: "%.1f", value)
+        } else {
+            valueLabel.text = "-"
+        }
     }
 }
 
