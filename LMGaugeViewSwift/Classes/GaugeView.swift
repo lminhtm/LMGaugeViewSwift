@@ -39,6 +39,13 @@ open class GaugeView: UIView {
         }
     }
     
+    /// Decimal places
+    public var decimalPlaces: Int = 1 {
+        didSet {
+            decimalPlacesFormatString = "%.\(decimalPlaces)f"
+        }
+    }
+    
     /// Minimum value.
     public var minValue: Double = 0
     
@@ -118,6 +125,7 @@ open class GaugeView: UIView {
     var endAngle: Double = .pi/4 + .pi * 2
     var divisionUnitAngle: Double = 0
     var divisionUnitValue: Double = 0
+    var decimalPlacesFormatString = "%.1f"
     
     lazy var progressLayer: CAShapeLayer = {
         let layer = CAShapeLayer()
@@ -256,7 +264,7 @@ open class GaugeView: UIView {
         }
         showValueLabelText()
         valueLabel.font = valueFont
-        valueLabel.minimumScaleFactor = 10/valueFont.pointSize
+        valueLabel.minimumScaleFactor = 0.5
         valueLabel.textColor = valueTextColor
         let insetX = ringThickness + divisionsPadding * 2 + divisionsRadius
         let insetY = showUnitOfMeasurement ? insetX + Double(GaugeView.unitOfMeasurementLabelHeight) : insetX
@@ -267,9 +275,9 @@ open class GaugeView: UIView {
         if minValueLabel.superview == nil {
             addSubview(minValueLabel)
         }
-        minValueLabel.text = String(format: "%.0f", minValue)
+        minValueLabel.text = String(format: decimalPlacesFormatString, minValue)
         minValueLabel.font = minMaxValueFont
-        minValueLabel.minimumScaleFactor = 10/minMaxValueFont.pointSize
+        minValueLabel.minimumScaleFactor = 0.5
         minValueLabel.textColor = minMaxValueTextColor
         minValueLabel.isHidden = !showMinMaxValue
         let minDotCenter = CGPoint(x: CGFloat(dotRadius * cos(startAngle)) + center.x,
@@ -280,9 +288,9 @@ open class GaugeView: UIView {
         if maxValueLabel.superview == nil {
             addSubview(maxValueLabel)
         }
-        maxValueLabel.text = String(format: "%.0f", maxValue)
+        maxValueLabel.text = String(format: decimalPlacesFormatString, maxValue)
         maxValueLabel.font = minMaxValueFont
-        maxValueLabel.minimumScaleFactor = 10/minMaxValueFont.pointSize
+        maxValueLabel.minimumScaleFactor = 0.5
         maxValueLabel.textColor = minMaxValueTextColor
         maxValueLabel.isHidden = !showMinMaxValue
         let maxDotCenter = CGPoint(x: CGFloat(dotRadius * cos(endAngle)) + center.x,
@@ -295,7 +303,7 @@ open class GaugeView: UIView {
         }
         unitOfMeasurementLabel.text = unitOfMeasurement
         unitOfMeasurementLabel.font = unitOfMeasurementFont
-        unitOfMeasurementLabel.minimumScaleFactor = 10/unitOfMeasurementFont.pointSize
+        unitOfMeasurementLabel.minimumScaleFactor = 0.5
         unitOfMeasurementLabel.textColor = unitOfMeasurementTextColor
         unitOfMeasurementLabel.isHidden = !showUnitOfMeasurement
         unitOfMeasurementLabel.frame = CGRect(x: valueLabel.frame.origin.x,
@@ -326,7 +334,7 @@ open class GaugeView: UIView {
     
     private func showValueLabelText() {
         if let value = value {
-            valueLabel.text = String(format: "%.1f", value)
+            valueLabel.text = String(format: decimalPlacesFormatString, value)
         } else {
             valueLabel.text = "-"
         }
