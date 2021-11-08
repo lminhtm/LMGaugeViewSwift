@@ -27,10 +27,6 @@ open class GaugeView: UIView {
     /// Current value.
     public var value: Double? = nil {
         didSet {
-            if let v = value {
-                value = max(min(v, maxValue), minValue)
-            }
-            
             // Set text for value label
             showValueLabelText()
             
@@ -50,7 +46,7 @@ open class GaugeView: UIView {
     public var minValue: Double = 0
     
     /// Maximum value.
-    public var maxValue: Double = 120
+    public var maxValue: Double = 100
     
     /// Limit value.
     public var limitValue: Double = 50
