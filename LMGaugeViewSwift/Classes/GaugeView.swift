@@ -330,7 +330,11 @@ open class GaugeView: UIView {
     
     private func showValueLabelText() {
         if let value = value {
-            valueLabel.text = String(format: decimalPlacesFormatString, value)
+            if value.isNaN {
+                valueLabel.text = "-"
+            } else {
+                valueLabel.text = String(format: decimalPlacesFormatString, value)
+            }
         } else {
             valueLabel.text = "-"
         }
