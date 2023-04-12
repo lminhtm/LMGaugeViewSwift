@@ -1,6 +1,7 @@
 # LMGaugeViewSwift
 
 [![CI Status](https://img.shields.io/travis/LMinh/LMGaugeViewSwift.svg?style=flat)](https://travis-ci.org/LMinh/LMGaugeViewSwift)
+![Swift-Package](https://img.shields.io/badge/Swift--Package-1.1.0-brightgreen)
 [![Version](https://img.shields.io/cocoapods/v/LMGaugeViewSwift.svg?style=flat)](https://cocoapods.org/pods/LMGaugeViewSwift)
 [![License](https://img.shields.io/cocoapods/l/LMGaugeViewSwift.svg?style=flat)](https://cocoapods.org/pods/LMGaugeViewSwift)
 [![Platform](https://img.shields.io/cocoapods/p/LMGaugeViewSwift.svg?style=flat)](https://cocoapods.org/pods/LMGaugeViewSwift)
@@ -19,12 +20,23 @@ https://github.com/lminhtm/LMGaugeView
 ## Requirements
 * iOS 8.0 or higher 
 
-## Installation
+## CocoaPods Installation
 LMGaugeViewSwift is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'LMGaugeViewSwift'
+```
+
+## Swift-Package Installation
+Open your project in Xcode
+
+1. Click "File" -> "Add Packages..."
+2. Paste the following URL: https://github.com/gallinaettore/LMGaugeViewSwift
+
+You can specify the dependency in Package.swift by adding this:
+```ruby
+.package(url: "https://github.com/gallinaettore/LMGaugeViewSwift.git", .upToNextMajor(from: "1.1.0"))
 ```
 
 ## Example

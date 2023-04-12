@@ -8,10 +8,10 @@
 import Foundation
 import UIKit
 
-public protocol GaugeViewDelegate: class {
+public protocol GaugeViewDelegate: AnyObject {
     
     /// Return ring stroke color from the specified value.
-    func ringStokeColor(gaugeView: GaugeView, value: Double) -> UIColor
+    func ringStokeColor(gaugeView: GaugeView, value: Double?) -> UIColor
 }
 
 open class GaugeView: UIView {
@@ -22,16 +22,23 @@ open class GaugeView: UIView {
     
     public static let defaultMinMaxValueFont = "HelveticaNeue"
     
+    public static let unitOfMeasurementLabelHeight = 20
+    
     /// Current value.
-    public var value: Double = 0 {
+    public var value: Double? = nil {
         didSet {
-            value = max(min(value, maxValue), minValue)
-            
             // Set text for value label
-            valueLabel.text = String(format: "%.0f", value)
+            showValueLabelText()
             
             // Trigger the stoke animation of ring layer
             strokeGauge()
+        }
+    }
+    
+    /// Decimal places
+    public var decimalPlaces: Int = 1 {
+        didSet {
+            decimalPlacesFormatString = "%.\(decimalPlaces)f"
         }
     }
     
@@ -39,7 +46,7 @@ open class GaugeView: UIView {
     public var minValue: Double = 0
     
     /// Maximum value.
-    public var maxValue: Double = 120
+    public var maxValue: Double = 100
     
     /// Limit value.
     public var limitValue: Double = 50
@@ -114,6 +121,7 @@ open class GaugeView: UIView {
     var endAngle: Double = .pi/4 + .pi * 2
     var divisionUnitAngle: Double = 0
     var divisionUnitValue: Double = 0
+    var decimalPlacesFormatString = "%.1f"
     
     lazy var progressLayer: CAShapeLayer = {
         let layer = CAShapeLayer()
@@ -125,7 +133,7 @@ open class GaugeView: UIView {
         return layer
     }()
     
-    lazy var valueLabel: UILabel = {
+    lazy public var valueLabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = UIColor.clear
         label.textAlignment = .center
@@ -250,21 +258,22 @@ open class GaugeView: UIView {
         if valueLabel.superview == nil {
             addSubview(valueLabel)
         }
-        valueLabel.text = String(format: "%.0f", value)
+        showValueLabelText()
         valueLabel.font = valueFont
-        valueLabel.minimumScaleFactor = 10/valueFont.pointSize
+        valueLabel.minimumScaleFactor = 0.5
         valueLabel.textColor = valueTextColor
         let insetX = ringThickness + divisionsPadding * 2 + divisionsRadius
-        valueLabel.frame = progressLayer.frame.insetBy(dx: CGFloat(insetX), dy: CGFloat(insetX))
+        let insetY = showUnitOfMeasurement ? insetX + Double(GaugeView.unitOfMeasurementLabelHeight) : insetX
+        valueLabel.frame = progressLayer.frame.insetBy(dx: CGFloat(insetX), dy: CGFloat(insetY))
         valueLabel.frame = valueLabel.frame.offsetBy(dx: 0, dy: showUnitOfMeasurement ? CGFloat(-divisionsPadding/2) : 0)
         
         // Min Value Label
         if minValueLabel.superview == nil {
             addSubview(minValueLabel)
         }
-        minValueLabel.text = String(format: "%.0f", minValue)
+        minValueLabel.text = String(format: decimalPlacesFormatString, minValue)
         minValueLabel.font = minMaxValueFont
-        minValueLabel.minimumScaleFactor = 10/minMaxValueFont.pointSize
+        minValueLabel.minimumScaleFactor = 0.5
         minValueLabel.textColor = minMaxValueTextColor
         minValueLabel.isHidden = !showMinMaxValue
         let minDotCenter = CGPoint(x: CGFloat(dotRadius * cos(startAngle)) + center.x,
@@ -275,9 +284,9 @@ open class GaugeView: UIView {
         if maxValueLabel.superview == nil {
             addSubview(maxValueLabel)
         }
-        maxValueLabel.text = String(format: "%.0f", maxValue)
+        maxValueLabel.text = String(format: decimalPlacesFormatString, maxValue)
         maxValueLabel.font = minMaxValueFont
-        maxValueLabel.minimumScaleFactor = 10/minMaxValueFont.pointSize
+        maxValueLabel.minimumScaleFactor = 0.5
         maxValueLabel.textColor = minMaxValueTextColor
         maxValueLabel.isHidden = !showMinMaxValue
         let maxDotCenter = CGPoint(x: CGFloat(dotRadius * cos(endAngle)) + center.x,
@@ -290,19 +299,24 @@ open class GaugeView: UIView {
         }
         unitOfMeasurementLabel.text = unitOfMeasurement
         unitOfMeasurementLabel.font = unitOfMeasurementFont
-        unitOfMeasurementLabel.minimumScaleFactor = 10/unitOfMeasurementFont.pointSize
+        unitOfMeasurementLabel.minimumScaleFactor = 0.5
         unitOfMeasurementLabel.textColor = unitOfMeasurementTextColor
         unitOfMeasurementLabel.isHidden = !showUnitOfMeasurement
         unitOfMeasurementLabel.frame = CGRect(x: valueLabel.frame.origin.x,
                                               y: valueLabel.frame.maxY - 10,
                                               width: valueLabel.frame.width,
-                                              height: 20)
+                                              height: CGFloat(GaugeView.unitOfMeasurementLabelHeight))
     }
     
     public func strokeGauge() {
         
         // Set progress for ring layer
-        let progress = maxValue != 0 ? (value - minValue)/(maxValue - minValue) : 0
+        let progress: Double
+        if let value = value {
+            progress = maxValue != 0 ? (value - minValue)/(maxValue - minValue) : 0
+        } else {
+            progress = 0
+        }
         progressLayer.strokeEnd = CGFloat(progress)
 
         // Set ring stroke color
@@ -311,6 +325,19 @@ open class GaugeView: UIView {
             ringColor = delegate.ringStokeColor(gaugeView: self, value: value)
         }
         progressLayer.strokeColor = ringColor.cgColor
+    }
+    
+    
+    private func showValueLabelText() {
+        if let value = value {
+            if value.isNaN {
+                valueLabel.text = "-"
+            } else {
+                valueLabel.text = String(format: decimalPlacesFormatString, value)
+            }
+        } else {
+            valueLabel.text = "-"
+        }
     }
 }
 
